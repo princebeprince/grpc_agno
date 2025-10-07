@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service AgentService {
+  rpc AskAgentStream(AgentRequest) returns (stream AgentResponse);
+}
+
+message AgentRequest {
+  string query = 1;
+}
+
+message AgentResponse {
+  string response = 1;
+}

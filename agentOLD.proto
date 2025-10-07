@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package agent;
+
+service AgentService {
+  rpc AskAgent (AgentRequest) returns (AgentResponse);
+}
+
+message AgentRequest {
+  string query = 1;
+}
+
+message AgentResponse {
+  string response = 1;
+}
